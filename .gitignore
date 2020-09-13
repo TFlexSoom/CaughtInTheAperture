@@ -1,0 +1,9 @@
+# Tristan Hilbert
+# 9/12/2020
+
+*.logs
+*.log
+
+node_modules/
+
+.vscode/
