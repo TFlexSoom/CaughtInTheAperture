@@ -7,10 +7,11 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'docs'),
-    publicPath: "/",
+    publicPath: "/CaughtInTheAperture/",
   },
   plugins:[
-    new CleanWebpackPlugin(),
+    //new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   module: {
     rules: [
@@ -49,9 +50,6 @@ module.exports = {
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-  ],
   devServer: {
     contentBase: path.join(__dirname, 'docs'),
     port: 8080,
