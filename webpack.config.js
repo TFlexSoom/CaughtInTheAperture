@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,6 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
     publicPath: "/",
   },
+  plugins:[
+    new CleanWebpackPlugin(),
+  ],
   module: {
     rules: [
       {
@@ -26,7 +30,20 @@ module.exports = {
         test: /\.md$/,
         exclude: /(README\.md)|(node_modules*)/,
         use: ['file-loader'],
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              limit: 50000,
+              mimetype: "application/font-woff",
+              name: "./fonts/[name].[ext]",
+            }
+          }
+        ],
+      },
     ],
   },
   resolve: {

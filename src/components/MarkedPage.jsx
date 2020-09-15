@@ -11,6 +11,9 @@ import Paper from "@material-ui/core/Paper";
 import marked from "marked";
 import {sanitize} from "dompurify";
 
+// Stylesheets
+import "../style/MarkedPage.css";
+
 function asyncLoadFile(url){
     let promise = new Promise((resolve, reject) => {
         let xhttp = new XMLHttpRequest;
@@ -59,7 +62,7 @@ export default function MarkedPage(props){
     const promise = asyncLoadFile(markup_url).then(handleLoad, console.error);
 
     return(
-        <Paper elevation={3} className={getClass(text)}>
+        <Paper elevation={3} className={"markdown-paper " + getClass(text)}>
             <div dangerouslySetInnerHTML={{__html: text}}></div>
         </Paper>
     )

@@ -5,6 +5,10 @@
  * 
  */
 
+// Fonts
+import "fontsource-roboto";
+import "fontsource-noto-sans-jp";
+
 // Stylesheets
 import "./style/style.css";
 

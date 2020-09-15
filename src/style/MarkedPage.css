@@ -1,0 +1,78 @@
+.markdown-paper{
+    margin: 20px 4px;
+    padding: 8px 12px;
+}
+
+.markdown-paper.loading{
+    height: 90%;
+    background-color: powderblue;
+
+    /* For Ripple Effect */
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes splish-splash{
+    0%{
+        padding-right: 0%;
+        padding-bottom: 0%;
+    }
+    75%{
+        padding-right: 100%;
+        padding-bottom: 90%;
+    }
+    100%{
+        padding-right: 100%;
+        padding-bottom: 90%;
+    }
+}
+
+.markdown-paper.loading:after{
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: white;
+    opacity: 0.6;
+    animation-name: splish-splash;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+
+/* Specifically Markdown Styles */
+.markup *{
+    font-family: "Noto Sans JP";
+}
+
+
+
+/* Dark-Mode Overrule */
+.markdown-paper.dark{
+    background-color: darkslategrey;
+}
+.markdown-paper.loading.dark{
+    background-color: darkslateblue;
+}
+
+.markdown-paper.markdown-paper.loading.dark:after{
+    background-color: lightgray;
+    opacity: 0.2;
+}
+
+/* Tablet */
+@media only screen and (max-width: 900px){
+    .markdown-paper{
+        margin: 10px 2px;
+        padding: 4px 8px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px){
+    .markdown-paper{
+        margin: 6px 2px;
+        padding: 2px 4px;
+    }
+}

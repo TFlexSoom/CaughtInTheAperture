@@ -4,11 +4,44 @@
  * A Stylesheet
  */
 
+/* Desktop -- General Rules*/
+* {
+    font-family: "Roboto";
+}
+
 body{
     background-color: beige;
+    margin: 0px 8%;
 }
 
 #main-page{
-    height: 100%;
+    min-height: 100%;
     padding: 0px 40px;
+}
+
+/* Dark-Mode Overrule */
+body.dark{
+    background-color: black;
+}
+
+/* Tablet */
+@media only screen and (max-width: 900px){
+    body{
+        margin: 0px 5%;
+    }
+
+    #main-page{
+        padding: 0px 20px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 600px){
+    body{
+        margin: 0px 3%;
+    }
+
+    #main-page{
+        padding: 0px 8px;
+    }
 }

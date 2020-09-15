@@ -22,7 +22,12 @@ function a11yProps(index) {
 }
 
 export default function ScrollTabs(props){
-    // titles :: [String]
+    /* tabContent :: 
+     *  [{
+     *      title: String,
+     *      isDisabled: Boolean,
+     *  }]    
+     */
     // handleChange :: function(event, newValue)
     // tabIndex = :: React.State(number);
     const {titles, handleChange, tabIndex, ...other} = props; 
@@ -53,7 +58,8 @@ export default function ScrollTabs(props){
                 localTitles.map((val) => 
                     <Tab 
                         key={counter.toString()} 
-                        label={val} 
+                        label={val.title}
+                        disabled={val.isDisabled}
                         {...a11yProps(counter++)} 
                     />
                 )

@@ -12,25 +12,39 @@ import MarkedPage from "./MarkedPage";
 import ScrollTabs from "./ScrollTabs";
 
 // Marked Down Pages
-import content from "../markdowns/test.md";
+import home from "../markdowns/home.md";
+import rules from "../markdowns/rules.md";
+import settings from "../markdowns/setting.md";
 
 export function App(props){
 
-    const [tabIndex, setValue] = React.useState(0);
+    const [tabIndex, setTabIndex] = React.useState(0);
 
+    const [markdownContent, setMarkdownContent] = React.useState(home);
+
+    const markdownContents = [
+        home,
+        settings,
+        home, // archtypes
+        home, // lore
+        rules, // special rules
+        home, // about me
+        null
+    ]
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
+        setTabIndex(newValue);
+        setMarkdownContent(markdownContents[newValue]);
     };
 
-    const titles = [
-        "Home",
-        "Setting",
-        "Archtypes",
-        "Lore",
-        "Special Rules",
-        "About Me",
-        "Engagement"
+    const tabContent = [
+        {title: "Home", isDisabled: false},
+        {title:"Setting", isDisabled: false},
+        {title:"Archtypes", isDisabled: false},
+        {title:"Lore", isDisabled: false},
+        {title:"Special Rules", isDisabled: false},
+        {title:"About Me", isDisabled: false},
+        {title:"Engagement", isDisabled: true}
     ]
 
     return(
@@ -38,9 +52,9 @@ export function App(props){
             <ScrollTabs 
                 tabIndex={tabIndex} 
                 handleChange={handleChange} 
-                titles={titles} 
+                titles={tabContent} 
                 />
-            <MarkedPage content={content}/>
+            <MarkedPage content={markdownContent}/>
         </Paper>
     );
 }
