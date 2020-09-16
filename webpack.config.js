@@ -8,6 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'docs'),
     publicPath: "/CaughtInTheAperture/",
+    //publicPath: "/",
   },
   plugins:[
     //new CleanWebpackPlugin(),

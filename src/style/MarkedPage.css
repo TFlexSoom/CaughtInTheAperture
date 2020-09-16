@@ -46,6 +46,10 @@
     font-family: "Noto Sans JP";
 }
 
+.markup img{
+    max-width: 100%;
+}
+
 
 
 /* Dark-Mode Overrule */

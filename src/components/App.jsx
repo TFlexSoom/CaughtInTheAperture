@@ -13,8 +13,12 @@ import ScrollTabs from "./ScrollTabs";
 
 // Marked Down Pages
 import home from "../markdowns/home.md";
+import setting from "../markdowns/setting.md";
+import archetypes from "../markdowns/archetypes.md";
+import lore from "../markdowns/lore.md";
 import rules from "../markdowns/rules.md";
-import settings from "../markdowns/setting.md";
+import aboutMe from "../markdowns/about-me.md";
+
 
 export function App(props){
 
@@ -24,11 +28,11 @@ export function App(props){
 
     const markdownContents = [
         home,
-        settings,
-        home, // archtypes
-        home, // lore
+        setting,
+        archetypes,
+        lore, // lore
         rules, // special rules
-        home, // about me
+        aboutMe, // about me
         null
     ]
 
@@ -39,12 +43,12 @@ export function App(props){
 
     const tabContent = [
         {title: "Home", isDisabled: false},
-        {title:"Setting", isDisabled: false},
-        {title:"Archtypes", isDisabled: false},
-        {title:"Lore", isDisabled: false},
-        {title:"Special Rules", isDisabled: false},
-        {title:"About Me", isDisabled: false},
-        {title:"Engagement", isDisabled: true}
+        {title: "Setting", isDisabled: false},
+        {title: "Archetypes", isDisabled: false},
+        {title: "Lore", isDisabled: false},
+        {title: "Special Rules", isDisabled: false},
+        {title: "About Me", isDisabled: false},
+        {title: "Engagement", isDisabled: true}
     ]
 
     return(

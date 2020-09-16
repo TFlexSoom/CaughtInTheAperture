@@ -17,6 +17,7 @@ body{
 #main-page{
     min-height: 100%;
     padding: 0px 40px;
+    padding-bottom: 8px;
 }
 
 /* Dark-Mode Overrule */
