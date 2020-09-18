@@ -9,3 +9,8 @@ This website just represents me practicing with Webpack and ReactJS. I have been
 
 #### A Word on Licensing
 I would like to retain copyright on this work, so most likely this will all be under an MIT license.
+
+## Contact
+- LinkedIn: [https://www.linkedin.com/in/tflexsoom/](https://www.linkedin.com/in/tflexsoom/)
+- Email: tchilbert\[at\]live\[dot\]com
+- Username: TFlexSoom
