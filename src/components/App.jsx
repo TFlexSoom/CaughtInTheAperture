@@ -33,7 +33,6 @@ export function App(props){
         lore, // lore
         rules, // special rules
         aboutMe, // about me
-        null
     ]
 
     const handleChange = (event, newValue) => {
@@ -45,10 +44,9 @@ export function App(props){
         {title: "Home", isDisabled: false},
         {title: "Setting", isDisabled: false},
         {title: "Archetypes", isDisabled: false},
-        {title: "Lore", isDisabled: false},
+        {title: "Lore", isDisabled: true},
         {title: "Special Rules", isDisabled: false},
-        {title: "About Me", isDisabled: false},
-        {title: "Engagement", isDisabled: true}
+        {title: "About Me", isDisabled: false}
     ]
 
     return(

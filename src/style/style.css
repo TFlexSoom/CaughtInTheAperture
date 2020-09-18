@@ -20,6 +20,11 @@ body{
     padding-bottom: 8px;
 }
 
+button.MuiButtonBase-root.Mui-disabled:hover{
+    cursor: not-allowed;
+    pointer-events: inherit;
+}
+
 /* Dark-Mode Overrule */
 body.dark{
     background-color: black;
